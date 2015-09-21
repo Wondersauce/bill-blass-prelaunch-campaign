@@ -7,7 +7,7 @@ gem 'rails', '4.0'
 
 gem 'pg'
 
-gem 'activeadmin'
+gem 'activeadmin', '1.0.0.pre1'
 
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -24,6 +24,8 @@ end
 gem 'delayed_job_active_record'
 
 gem 'unicorn'
+
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
