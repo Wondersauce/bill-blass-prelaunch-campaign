@@ -1,11 +1,3 @@
-silence_warnings do
-    begin
-        require 'pry'
-        IRB = Pry
-    rescue LoadError
-    end
-end
-
 Prelaunchr::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -43,8 +35,7 @@ Prelaunchr::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-
-  # For mailer configs
+  # mailer configs
   config.action_mailer.perform_deliveries = false
   config.action_mailer.raise_delivery_errors = true
 end
