@@ -23,10 +23,46 @@
         <%= stylesheet_link_tag "application.css", :media => "all" %>
         <%= csrf_meta_tags %>
 </head>
+
 <body id="<%= @bodyId %>">
 
-<%= yield %>
-
+  <%= render partial: 'shared/header' %>
+  <div id="wrap">
+    <div id="content">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>
+
+<% if false %>
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+<head data-hook="inside_head">
+  <%= render partial: 'spree/shared/head' %>
+  <script>
+    BillBlass.controller = "<%= controller_name %>";
+    BillBlass.action = "<%= action_name %>";
+    BillBlass.currency = "<%= Spree::Config[:currency] %>";
+  </script>
+</head>
+<body class="<%= body_class %> <%= controller_name %>" id="<%= @body_id || 'default' %>" data-hook="body">
+  <%= render partial: 'spree/shared/google_analytics.js' %>
+  <%= render partial: 'spree/shared/header' %>
+
+  <div id="wrap">
+    <div id="content">
+      <%#= flash_messages %>
+      <%= yield %>
+    </div>
+    <%= yield :templates %>
+  </div>
+</body>
+</html>
+
+<% end %>

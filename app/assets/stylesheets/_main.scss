@@ -35,7 +35,7 @@ body {
 #content {
 	min-height: 100%;
 	padding: $padding-desktop-v * 2 $padding-desktop-h $padding-desktop-v;
-	opacity: 0;
+	//opacity: 0;
 	@include transition(opacity .3s);
 	&.visible {
 		opacity: 1;
