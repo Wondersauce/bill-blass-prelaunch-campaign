@@ -1,0 +1,260 @@
+// Text field/button styles
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="button"],
+input[type="submit"],
+button,
+.btn,
+.chosen-single {
+	width: 100%;
+	@include box-sizing(border-box);
+	@include type-heading3;
+	padding: $form-base-unit * 2;
+	height: $form-element-height;
+	border: 2px solid #FFF;
+}
+
+// Text field styles
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+	background: transparent;
+	color: $white;
+	/*@include placeholder {*/
+		/*color: rgba($white, .5);*/
+		/*position: relative;*/
+		/*top: 2px;*/
+	/*}*/
+}
+
+// Button styles
+.btn {
+	display: inline-block;
+	text-decoration: none;
+}
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+	background: $white;
+	color: $dark-gray;
+	cursor: pointer;
+	@include transition(background .3s, color .3s);
+	text-align: center;
+	&:hover {
+		background: transparent;
+		color: $white;
+	}
+}
+
+// Error styles
+input.error {
+	border-color: $error-color;
+	color: $error-color;
+	/*@include placeholder {*/
+		/*color: rgba($error-color, .5);*/
+	/*}*/
+}
+label.error {
+	display: none !important;
+}
+
+// Select styles
+select {
+	display: none !important;
+}
+.chosen-container {
+	width: 100% !important;
+}
+.hidden {
+	display: none;
+}
+
+// Checkbox/radio styles
+.checkbox,
+.radio {
+	position: relative;
+	label {
+		@include user-select(none);
+		cursor: pointer;
+		margin-left: $form-base-unit * 2;
+		@include type-heading3;
+		&:before,
+		&:after {
+			position: absolute;
+			content: " ";
+			top: 0;
+			left: $form-base-unit;
+		}
+		&:before,
+		&:after {
+			box-sizing: border-box;
+			width: 18px;
+			height: 18px;
+			border-radius: 18px;
+			border: 2px solid $white;
+		}
+		&:after {
+			background: $white;
+			opacity: 0;
+			@include transition(opacity .1s);
+		}
+	}
+	input {
+		visibility: hidden;
+		&:checked + label:after {
+			opacity: .3;
+		}
+	}
+}
+
+// Radio styles
+.radio {
+	height: $form-element-height;
+	label {
+		@include transition(opacity .3s);
+		height: $form-element-height;
+		border: 2px solid #FFF;
+		position: absolute;
+		top: 0;
+		left: $form-base-unit * 6;
+		right: $form-base-unit;
+		padding: $form-base-unit * 2;
+		margin: 0;
+		&:before,
+		&:after {
+			top: $form-base-unit * 2;
+			left: $form-base-unit * -5;
+		}
+	}
+	input {
+		& + label {
+			opacity: .3;
+			&:hover {
+				opacity: .5;
+			}
+		}
+		&:checked + label {
+			opacity: 1;
+		}
+	}
+}
+
+// Webkit autocomplete styling
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px $background-gradient-from inset;
+	-webkit-text-fill-color: $white;
+}
+
+// Structure
+.panel {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: $form-base-unit * 6;
+	position: relative;
+	@include type-heading3;
+	&:first-child,
+	&.first {
+		margin-top: 0;
+	}
+	p {
+		margin-bottom: $form-base-unit * 2;
+	}
+	hr {
+		display: none;
+	}
+}
+.panel-heading {
+	margin-bottom: $form-base-unit * 6;
+	.panel-title {
+		@include type-heading2;
+	}
+}
+.form-group,
+.checkbox,
+.radio,
+.checkbox {
+	margin-bottom: $form-base-unit * 2;
+}
+.form-buttons {
+	margin-top: $form-base-unit * 4;
+}
+.login-form-buttons {
+	margin-top: $form-base-unit * 2;
+}
+
+.row {
+	margin-left: $form-base-unit * -1;
+	margin-right: $form-base-unit * -1;
+	> * {
+		padding-left: $form-base-unit;
+		padding-right: $form-base-unit;
+	}
+}
+
+// Errors
+.alert {
+	color: $error-color;
+	h3 {
+		display: none;
+	}
+	p {
+		@include type-heading3;
+		margin-bottom: 20px;
+	}
+	li {
+		@include type-heading4;
+		margin-bottom: 10px;
+	}
+}
+
+// Specific stuff
+.login-bottom,
+.register-bottom {
+	margin-top: $form-base-unit * 2;
+	line-height: 2.3em;
+}
+#registration #account {
+	margin-bottom: $form-base-unit * 8;
+}
+
+.add-new-address {
+	@include type-heading4;
+	@include user-select(none);
+	position: absolute;
+	top: 7px;
+	right: 0;
+	cursor: pointer;
+	padding-bottom: 4px;
+	border-bottom: 2px solid transparent;
+	@include transition(border-color .1s);
+	&:hover,
+	&.open {
+		border-bottom-color: $white;
+	}
+	&:before {
+		display: inline;
+		content: "+";
+	}
+	&.open:before {
+		content: "-";
+	}
+}
+.new-address {
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	@include transition(opacity .3s);
+	> :last-child {
+		padding-bottom: $form-base-unit * 6;
+	}
+	&.open {
+		overflow: visible;
+		height: auto;
+		opacity: 1;
+	}
+}

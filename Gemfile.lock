@@ -52,10 +52,10 @@ GEM
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
-    coffee-script (2.2.0)
+    coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.4.0)
+    coffee-script-source (1.9.1.1)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
     delayed_job_active_record (0.4.4)
@@ -168,11 +168,15 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  bourbon
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
   pg
   pry
   rails (= 3.2.11)
-  sass-rails (~> 3.2.3)
+  sass-rails
   uglifier (>= 1.0.3)
   unicorn
+
+BUNDLED WITH
+   1.10.5

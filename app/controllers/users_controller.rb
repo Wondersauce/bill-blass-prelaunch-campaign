@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
     before_filter :skip_first_page, :only => :new
 
+    def styleguide
+    end
+
     def new
         @bodyId = 'home'
         @is_mobile = mobile_device?
