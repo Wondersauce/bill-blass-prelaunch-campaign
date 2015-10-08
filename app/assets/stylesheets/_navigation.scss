@@ -27,7 +27,7 @@
 			top: 124px;
 			left: 50%;
 			margin-left: -63px;
-			opacity: 0;
+			//opacity: 0;
 			pointer-events: none;
 			@include transition(opacity .5s);
 			&.visible {
