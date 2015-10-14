@@ -70,6 +70,8 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastercsv (1.5.5)
+    font-awesome-rails (4.4.0.0)
+      railties (>= 3.2, < 5.0)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     has_scope (0.5.1)
@@ -108,6 +110,8 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -171,12 +175,13 @@ DEPENDENCIES
   bourbon
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
+  font-awesome-rails
   pg
-  pry
+  pry-rails
   rails (= 3.2.11)
   sass-rails
   uglifier (>= 1.0.3)
   unicorn
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

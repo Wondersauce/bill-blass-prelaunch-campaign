@@ -23,7 +23,7 @@ gem 'coffee-rails', '~> 3.2.1'
 gem 'uglifier', '>= 1.0.3'
 
 group :development do
-  gem 'pry'
+  gem 'pry-rails'
 end
 
 gem 'delayed_job_active_record'
@@ -44,3 +44,5 @@ gem 'unicorn'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'font-awesome-rails'
