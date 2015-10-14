@@ -41,8 +41,12 @@ body {
 		opacity: 1;
 	}
 }
+#bottom {
+  margin-top: 55px;
+  text-align: center;
+}
 h1 {
-	@include type-heading1;
+	@include type-heading-prelaunch;
 }
 h2 {
 	@include type-heading2;
@@ -70,39 +74,18 @@ a {
 		vertical-align: middle;
 	}
 }
-.content {
-	> :first-child {
-		margin-top: 0;
-	}
-	h1,
-	h2,
-	h3,
-	h4,
-	form {
-		margin-top: 60px;
-	}
-	a:not(.btn) {
-		text-decoration: none;
-		color: $white;
-		border-bottom: 2px solid $white;
-	}
-	p,
-	ul,
-	ol {
-		margin-top: 15px;
-	}
-	ul,
-	ol {
-		@include type-list;
-	}
-	ul {
-		list-style: outside;
-		margin-left: 1em;
-	}
+#terms-open {
+  display: inline-block;
+  margin-bottom: 25px;
+  @include type-heading3;
+  cursor: pointer;
 }
-.stock-item {
-	@include type-line-item;
-	margin-bottom: 50px;
+#countbox {
+  @include type-heading-prelaunch;
+  width: 270px; // prevent from wiggling around
+  margin: 0 auto;
+  text-align: left;
+  white-space: nowrap;
 }
 .sidebar {
 	@include sidebar-common;
@@ -151,37 +134,5 @@ a {
 	span {
 		@include type-heading3;
 		color: rgba($white, 0.3);
-	}
-}
-.progress-steps {
-	@include type-heading3;
-	display: inline-block;
-	text-align: left;
-	position: fixed;
-	top: 50%;
-	width: 100px;
-	margin-left: -50px;
-	margin-top: -60px;
-	li {
-		margin-bottom: 15px;
-		opacity: .5;
-		@include transition(opacity .5s);
-		&.active {
-			opacity: 1;
-			position: relative;
-			&:before {
-				content: " ";
-				position: absolute;
-				left: -20px;
-				top: 1px;
-				width: 7px;
-				background: url(asset-path('progress-arrow.png', image));
-				background-size: 100% 100%;
-				height: 12px;
-			}
-		}
-	}
-	a {
-		border: none;
 	}
 }

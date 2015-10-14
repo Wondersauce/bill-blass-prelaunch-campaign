@@ -1,20 +1,9 @@
-<div class="hero">
-    <p class="large brandon">Harry&#8217;s is live</p>
-    <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
-</div>
-
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-    <% if Rails.application.config.ended %>
-        <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-        <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-        <p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
-        <p class="again brandon">Thank You Again!</p>
-    <% else %>
-        <div class="key"></div>
-        <p class="byline brandon">Be the first to know</p>
-        <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-            <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
-        <% end %>
-    <% end %>
+<div id="landing">
+  <h1>Bill Blass:  the first american designer brand, est. 1970</h1>
+  <p>Be the first to get a peek of Bill Blass apparel, handbags, shoes and more.<br><br>
+  Enter for a chance to win $3000 of Bill Blass product.</p>
+  <%= form_for @user, :url => { :action => "create" } do |f| %>
+      <%= f.text_field :email, :placeholder => "Enter your email", :class => "email" %>
+      <input class="submit" name="commit" type="submit" value="Submit" />
+  <% end %>
 </div>

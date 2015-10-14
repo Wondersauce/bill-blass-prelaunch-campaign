@@ -5,64 +5,38 @@
 <!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
 <head>
-        <title>Harry&#8217;s &ndash; Tell Friends, Shave for Free</title>
-        <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-        <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-
-        <meta property="og:title" content="Harry’s is coming!"/>
-        <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here."/>
-        <meta property="og:image" content="<%= asset_path("refer/truman.png") %>"/>
-        <meta property="og:url" content="<%= root_url %>"/>
-        <% if @is_mobile %>
-            <% if @bodyId == 'home' %>
-                <meta name="viewport" content="width=1600" />
-            <% else %>
-                <meta name="viewport" content="width=1120" />
-            <% end %>
-        <% end %>
-        <%= stylesheet_link_tag "application.css", :media => "all" %>
-        <%= csrf_meta_tags %>
-</head>
-
-<body id="<%= @bodyId %>">
-
-  <%= render partial: 'shared/header' %>
-  <div id="wrap">
-    <div id="content">
-      <%= yield %>
-    </div>
-  </div>
-
-</body>
-</html>
-
-<% if false %>
-<!doctype html>
-<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
-<head data-hook="inside_head">
-  <%= render partial: 'spree/shared/head' %>
+  <title>Bill Blass</title>
+  <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+  <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+  <meta property="og:title" content=""/>
+  <meta property="og:description" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content="<%= root_url %>"/>
+  <%= stylesheet_link_tag "application.css", :media => "all" %>
+  <%= javascript_include_tag "application.js" %>
+  <%= csrf_meta_tags %>
   <script>
     BillBlass.controller = "<%= controller_name %>";
     BillBlass.action = "<%= action_name %>";
-    BillBlass.currency = "<%= Spree::Config[:currency] %>";
   </script>
 </head>
-<body class="<%= body_class %> <%= controller_name %>" id="<%= @body_id || 'default' %>" data-hook="body">
-  <%= render partial: 'spree/shared/google_analytics.js' %>
-  <%= render partial: 'spree/shared/header' %>
-
+<body id="<%= @bodyId %>">
+  <%= render partial: 'shared/header' %>
   <div id="wrap">
     <div id="content">
-      <%#= flash_messages %>
-      <%= yield %>
+      <div id="splash">
+        <div class="splash-left">
+          <%= yield %>
+        </div>
+        <div class="splash-right">
+          <%= image_tag("poster.png") %>
+        </div>
+      </div>
+      <div id="bottom">
+        <a id="terms-open">Terms &amp; Conditions</a>
+        <div id="countbox"></div>
+      </div>
     </div>
-    <%= yield :templates %>
   </div>
 </body>
 </html>
-
-<% end %>

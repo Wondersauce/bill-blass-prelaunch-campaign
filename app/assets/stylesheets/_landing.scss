@@ -1,0 +1,44 @@
+#splash {
+  max-width: 1000px;
+  margin: 0 auto;
+  @include clearfix;
+  .splash-left {
+    width: 58%;
+    float: left;
+    h1 {
+      margin-bottom: 35px;
+    }
+    p {
+      max-width: 400px;
+    }
+  }
+  .splash-right {
+    width: 38%;
+    float: right;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+#landing {
+  p {
+    margin-bottom: 55px;
+  }
+}
+#refer {
+  .congrats {
+    @include type-heading3;
+    margin-bottom: 15px;
+  }
+  .intro {
+    margin-bottom: 45px;
+  }
+  .link {
+    margin-bottom: 70px;
+  }
+  .rewards {
+    @include type-heading3;
+  }
+}

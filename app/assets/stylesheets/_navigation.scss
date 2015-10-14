@@ -36,16 +36,11 @@
 			}
 		}
 	}
-	> a,
-	#link-to-cart a {
+	> a {
 		@include type-heading3;
 		color: $white;
 		text-decoration: none;
-		opacity: 0;
 		@include transition(z-index 0s .5s, opacity .3s, border-color .3s);
-		&.visible {
-			opacity: 1;
-		}
 		.checkout & {
 			display: none;
 			&#shop-open,
@@ -57,165 +52,28 @@
 			display: none;
 		}
 	}
-	#shop-open,
-	#account,
-	#link-to-cart,
-	#plus-one,
-	#menu-open,
-	#subscribe-open,
-	#help-open {
+	#follow-open,
+  #contact-open,
+  #share-open {
 		position: fixed;
 		z-index: 10;
 		@include nav-link;
 	}
-	#shop-open,
-	#menu-open,
-	#subscribe-open {
-		&.open {
-			@include transition(z-index 0s 0s);
-			z-index: 40;
-		}
-	}
-	#shop-open {
-		top: 25px;
-		left: 40px;
-		@include transition(z-index 0s .5s, margin 0.5s);
-		&.with-close {
-			margin-left: 59px;
-		}
-	}
-	#account {
-		top: 25px;
-		right: 115px;
-	}
-	#link-to-cart,
-	#plus-one,
-	#help-open {
-		top: 25px;
-		right: 40px;
-	}
-	#link-to-cart {
-		opacity: 1;
-		@include transition(opacity .6s);
-		#cart & {
-			border-bottom-color: $white;
-		}
-		&.hidden {
-			opacity: 0;
-		}
-	}
-	#plus-one {
-		pointer-events: none;
-		opacity: 0;
-		@include transition(opacity .6s);
-		&.visible {
-			opacity: 0;
-		}
-		&.plusone-visible {
-			opacity: 1;
-		}
-	}
-	#help-open {
-		display: none;
-	}
-	#menu-open {
+  #follow-open {
 		bottom: 25px;
 		left: 40px;
 	}
-	#subscribe-open {
+  #contact-open {
+		bottom: 25px;
+		left: 50%;
+    width: 62px;
+    margin-left: -31px;
+	}
+	#share-open {
 		bottom: 25px;
 		right: 40px;
 	}
 	#subscribe {
 		@include sidebar-common;
-	}
-	#shop {
-		ul {
-			top: 55px;
-		}
-		&.open ul {
-			top: 65px;
-		}
-	}
-	#menu {
-		ul {
-			bottom: 55px;
-		}
-		&.open ul {
-			bottom: 65px;
-		}
-		.social {
-			margin-top: 15px;
-			a {
-				margin-left: 10px;
-				font-size: 13px;
-			}
-		}
-	}
-	#subscribe {
-		right: 0;
-		bottom: 0;
-		text-align: right;
-		padding: 60px 40px;
-		width: 320px;
-		@include box-sizing(border-box);
-		padding-left: 0;
-		input {
-			width: 100%;
-			background: rgba($background-dark, .95);
-		}
-	}
-	#subscribe-open,
-	#subscribe {
-		&.hidden {
-			opacity: 0;
-			pointer-events: none;
-			&.open {
-				@include transition(opacity 1s 1s, display 0s 2s);
-			}
-		}
-	}
-	#help {
-		right: 0;
-		.help-content {
-			text-align: center;
-			position: absolute;
-			margin-top: -122px;
-			top: 50%;
-			left: 0;
-			right: 0;
-			p {
-				margin: 50px 0;
-				@include type-heading3;
-				line-height: 2em;
-			}
-		}
-	}
-	#size-chart {
-		right: 0;
-		min-width: 400px;
-		h3 {
-			margin-bottom: 40px;
-		}
-		table {
-			width: 86%;
-			text-align: center;
-			position: absolute;
-			top: 50%;
-			left: 7%;
-			margin-top: -171px; // hard coded height :\
-			tr {
-				th {
-					text-align: center;
-					&:first-child {
-						@include type-heading3;
-					}
-				}
-				td {
-					text-align: center;
-					padding: 10px;
-				}
-			}
-		}
 	}
 }
