@@ -56,4 +56,30 @@
 	.blank {
 		display: none;
 	}
+
+  // SPLASH
+  #splash {
+    max-width: 400px;
+    .splash-left {
+      width: 100%;
+      float: none;
+      margin-bottom: 45px;
+      input[type="button"], input[type="submit"] {
+        float: right;
+        width: 20%;
+      }
+      input[type="text"] {
+        width: 80%;
+      }
+    }
+    .splash-right {
+      width: 100%;
+      float: none;
+    }
+  }
+  #bottom {
+    #countbox {
+      width: 174px; // keep from jerking around
+    }
+  }
 }

@@ -24,7 +24,7 @@
 
 #landing {
   p {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 }
 #refer {
@@ -37,8 +37,50 @@
   }
   .link {
     margin-bottom: 70px;
+    p {
+      margin: 20px 0;
+    }
+    .share {
+      @include type-heading3;
+      border-width: 0;
+      &:hover {
+        border-width: 0;
+      }
+    }
+    ul {
+      display: inline-block;
+      li {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 1.2em;
+        cursor: pointer;
+        @include transition(opacity .3s);
+        opacity: 1;
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
   }
   .rewards {
     @include type-heading3;
+  }
+}
+
+#bottom {
+  margin-top: 55px;
+  text-align: center;
+  #terms-open {
+    display: inline-block;
+    margin-bottom: 25px;
+    @include type-heading3;
+    cursor: pointer;
+  }
+  #countbox {
+    @include type-heading-prelaunch;
+    width: 270px; // prevent from wiggling around
+    margin: 0 auto;
+    text-align: left;
+    white-space: nowrap;
   }
 }

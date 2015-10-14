@@ -41,10 +41,6 @@ body {
 		opacity: 1;
 	}
 }
-#bottom {
-  margin-top: 55px;
-  text-align: center;
-}
 h1 {
 	@include type-heading-prelaunch;
 }
@@ -73,19 +69,6 @@ a {
 		display: table-cell;
 		vertical-align: middle;
 	}
-}
-#terms-open {
-  display: inline-block;
-  margin-bottom: 25px;
-  @include type-heading3;
-  cursor: pointer;
-}
-#countbox {
-  @include type-heading-prelaunch;
-  width: 270px; // prevent from wiggling around
-  margin: 0 auto;
-  text-align: left;
-  white-space: nowrap;
 }
 .sidebar {
 	@include sidebar-common;

@@ -5,9 +5,15 @@
     <p>Earn $10 in credit for each friend who signs up, with a cap of $200 in total credit.  Copy and paste the link and email it to your friends or share on social:</p>
   </div>
   <div class="link">
-    <div class="copy-link"><%= root_url %>?ref=<%= @user.referral_code %></div>
+    <%= text_field :user, :link, :value => root_url + '?ref=' + @user.referral_code %>
+    <input class="copy" name="copy" type="button" value="Copy" />
     <p>Bookmark this page and check back to see how many credits you’ve earned.</p>
-    <p>Share</p>
+    <a class="share">Share</a>
+    <ul class="share-links">
+      <li class="twitter"><i class="fa fa-twitter"></i></li>
+      <li class="facebook"><i class="fa fa-facebook"></i></li>
+      <li class="envelope"><i class="fa fa-envelope"></i></li>
+    </ul>
   </div>
   <div class="rewards">
     You have referred <%= @user.referrals.count %> people.
