@@ -31,7 +31,7 @@
         </div>
       </div>
       <div id="bottom">
-        <a id="terms-open">Terms &amp; Conditions</a>
+        <%= link_to "Terms & Conditions", { :controller => "users", :action => "policy" }, :id => "terms-open" %>
         <div id="countbox"></div>
       </div>
     </div>

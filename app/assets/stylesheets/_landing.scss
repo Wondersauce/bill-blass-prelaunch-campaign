@@ -199,3 +199,43 @@
     white-space: nowrap;
   }
 }
+
+#terms {
+  #header {
+    #follow-open,
+    #contact-open,
+    #share-open {
+      display: none;
+    }
+  }
+  #splash {
+    .splash-left {
+      width: 100%;
+      p {
+        max-width: none;
+      }
+    }
+    .splash-right {
+      display: none;
+    }
+  }
+  #bottom {
+    display: none;
+  }
+  .terms {
+    max-width: 480px;
+    margin: 0 auto;
+    ol {
+      list-style-position: inside;
+      list-style-type:decimal;
+      li {
+        margin-bottom: 25px;
+        @include type-heading3;
+        p {
+          margin-top: 10px;
+          @include type-body;
+        }
+      }
+    }
+  }
+}

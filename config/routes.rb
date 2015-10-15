@@ -10,7 +10,7 @@ Prelaunchr::Application.routes.draw do
 
   match 'refer-a-friend' => 'users#refer'
 
-  match 'privacy-policy' => 'users#policy'
+  match 'terms-and-conditions' => 'users#policy'
 
   match 'styleguide' => 'users#styleguide'
 
