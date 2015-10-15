@@ -1,3 +1,69 @@
+$(function() {
+	BillBlass.init.call(BillBlass);
+});
+BillBlass = {
+	init: function() {
+		this.Navigation.init();
+	}
+};
+
+BillBlass.Navigation = {
+	timeout: null,
+	container: '#wrap',
+	logoName: '#logo-name',
+	followButton: '#follow-open',
+	followSidebar: '#follow',
+	contactButton: '#contact-open',
+	contactSidebar: '#contact',
+	shareButton: '#share-open',
+  shareSidebar: '#share',
+	speed: 500,
+	logoSpeed: 1000,
+	init: function() {
+		this.bindSidebars();
+	},
+	/* Sidebars */
+	bindSidebars: function() {
+		$(this.followButton).on('mouseenter', function(e) {
+			e.stopPropagation();
+			this.openFollow();
+		}.bind(this));
+		$(this.contactButton).on('mouseenter', function(e) {
+			e.stopPropagation();
+			this.openContact();
+		}.bind(this));
+		$(this.shareButton).on('mouseenter', function(e) {
+			e.stopPropagation();
+			this.openShare();
+		}.bind(this));
+    $(this.followSidebar).on('mouseleave', function(e) {
+			e.stopPropagation();
+			this.closeFollow();
+		}.bind(this));
+		$(this.contactSidebar).on('mouseleave', function(e) {
+			e.stopPropagation();
+			this.closeContact();
+		}.bind(this));
+		$(this.shareSidebar).on('mouseleave', function(e) {
+			e.stopPropagation();
+			this.closeShare();
+		}.bind(this));
+	},
+	openFollow: function() { this.setSidebarState(this.followButton, this.followSidebar, true); },
+	closeFollow: function() { this.setSidebarState(this.followButton, this.followSidebar, false); },
+	toggleFollow: function() { this.setSidebarState(this.followButton, this.followSidebar, null); },
+	openContact: function() { this.setSidebarState(this.contactButton, this.contactSidebar, true); },
+	closeContact: function() { this.setSidebarState(this.contactButton, this.contactSidebar, false); },
+	toggleContact: function() { this.setSidebarState(this.contactButton, this.contactSidebar, null); },
+	openShare: function() { this.setSidebarState(this.shareButton, this.shareSidebar, true); },
+	closeShare: function() { this.setSidebarState(this.shareButton, this.shareSidebar, false); },
+	toggleShare: function() { this.setSidebarState(this.shareButton, this.shareSidebar, null); },
+	setSidebarState: function(button, sidebar, state) {
+		$(button).toggleClass('open', state);
+		$(sidebar).toggleClass('open', state);
+	}
+};
+
 var CDown = function() {
   this.state=0;// if initialized
   this.counts=[];// array holding countdown date objects and id to print to {d:new Date(2013,11,18,18,54,36), id:"countbox1"}

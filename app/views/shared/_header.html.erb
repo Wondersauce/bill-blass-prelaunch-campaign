@@ -6,4 +6,32 @@
   <a id="follow-open">Follow</a>
   <a id="contact-open">Contact</a>
   <a id="share-open">Share</a>
+  <div id="follow">
+    <ul>
+      <li class="twitter"><a href="https://twitter.com/billblass" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <li class="instagram"><a href="https://instagram.com/billblassusa" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      <li class="facebook"><a href="https://www.facebook.com/billblassusa" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+  </div>
+  <div id="share">
+    <ul>
+      <% # TODO: replace this insanity %>
+      <% message = "Hey friends! Sign up for Bill Blass's private launch offer, and get entered to win $3000 of product." %>
+      <% email_title = "Somebody Chic Invites You to billblass.com" %>
+      <% email_content = %(A fabulous friend has invited you to the exclusive pre-launch of Bill Blass. When you sign up for the private launch offer, you will be entered to win $3000 of Bill Blass product.%0D%0A%0D%0AEven better, for every stylish friend you refer, you will receive a $10 credit if they register, up to $200!%0D%0A%0D%0ASign up here:) %>
+      <% if (@user) %>
+        <li class="twitter"><a target="_blank" href="https://twitter.com/intent/tweet?text=<%= CGI::escape(message + " " + root_url + '?ref=' + @user.referral_code) %>"><i class="fa fa-twitter"></i></a></li>
+        <li class="facebook"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url + '?ref=' + @user.referral_code) %>&title=Bill+Blass"><i class="fa fa-facebook"></i></a></li>
+        <li class="envelope"><a href="mailto:?subject=<%= email_title %>&body=<%= email_content + " " + root_url + '?ref=' + @user.referral_code %>"<i class="fa fa-envelope"></i></a></li>
+      <% else %>
+        <li class="twitter"><a target="_blank" href="https://twitter.com/intent/tweet?text=<%= CGI::escape(message + " " + root_url) %>"><i class="fa fa-twitter"></i></a></li>
+        <li class="facebook"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>&title=Bill+Blass"><i class="fa fa-facebook"></i></a></li>
+        <li class="envelope"><a href="mailto:?subject=<%= email_title %>&body=<%= email_content + " " + root_url %>"<i class="fa fa-envelope"></i></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <div id="contact">
+    212.689.8955
+    <a href="mailto:info@billblass.com">info@billblass.com</a>
+  </div>
 </div>

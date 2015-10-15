@@ -1,3 +1,58 @@
+#follow,
+#share,
+#contact {
+  @include sidebar-common;
+}
+#follow {
+  left: 0;
+	bottom: 0;
+	padding: 60px $padding-desktop-h;
+  ul {
+    li {
+      padding-right: 10px;
+    }
+  }
+}
+#contact {
+  left: 50%;
+	bottom: 0;
+	padding: 60px $padding-desktop-h;
+  width: 320px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: -160px;
+  a {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+#share {
+  right: 0;
+	bottom: 0;
+	padding: 60px $padding-desktop-h;
+  ul {
+    li {
+      padding-left: 10px;
+    }
+  }
+}
+#follow,
+#share {
+  ul {
+    li {
+      font-size: 1.2em;
+      display: inline-block;
+      a {
+        border-width: 0;
+        @include transition(opacity .3s);
+        &:hover {
+          border-width: 0;
+          opacity: .65;
+        }
+      }
+    }
+  }
+}
 #splash {
   max-width: 1000px;
   margin: 0 auto;
@@ -171,8 +226,14 @@
         cursor: pointer;
         @include transition(opacity .3s);
         opacity: 1;
+        a {
+          border-width: 0;
+          &:hover {
+            border-width: 0;
+          }
+        }
         &:hover {
-          opacity: .5;
+          opacity: .65;
         }
       }
     }
