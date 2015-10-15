@@ -16,6 +16,38 @@
     </ul>
   </div>
   <div class="rewards">
-    You have referred <%= @user.referrals.count %> people.
+    Your rewards
+    <div id="number-line">
+      <ul class="numbers">
+        <% (0..20).each do |n| %>
+          <% if n == [@user.referrals.count, 20].min then %>
+            <li class="current">$<%= n * 10 %></li>
+          <% else %>
+            <li>$<%= n * 10 %></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <ul class="line">
+        <% (0..20).each do |n| %>
+          <% if n <= @user.referrals.count %>
+            <li class="active">
+              <div class="line-left"></div>
+              <div class="line-middle"></div>
+              <div class="line-right"></div>
+            </li>
+          <% else %>
+            <li>
+              <div class="line-left"></div>
+              <div class="line-middle"></div>
+              <div class="line-right"></div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="scale">
+        <div class="scale-min">0 referrals</div>
+        <div class="scale-max">20 referrals</div>
+      </div>
+    </div>
   </div>
 </div>

@@ -22,6 +22,121 @@
   }
 }
 
+#number-line {
+  max-width: 400px;
+  margin-top: 20px;
+  ul.numbers {
+    width: percentage(22 / 21);
+    white-space: nowrap;
+    font-size: 0;
+    li {
+      display: inline-block;
+      width: percentage(1 / 21 * 4);
+      margin-left: percentage(1 / 21 * -3);
+      position: relative;
+      left: percentage(1 / 21);
+      text-align: center;
+      overflow: visible;
+      opacity: 0;
+      @include type-heading3;
+      &:first-child {
+        left: percentage(1 / 21 * 3);
+        text-align: left;
+        opacity: .3;
+      }
+      &:last-child {
+        left: percentage(1 / -21);
+        text-align: right;
+        opacity: .3;
+      }
+      &.current {
+        opacity: 1;
+      }
+    }
+  }
+  ul.line {
+    display: table;
+    width: percentage(22 / 21);
+    li {
+      display: table-cell;
+      position: relative;
+      height: 12px;
+      width: percentage(1 / 21);
+      left: percentage(1 / -21);
+      opacity: .3;
+      &.active {
+        opacity: 1;
+      }
+      div {
+        background: $white;
+      }
+      .line-left {
+        width: 2px;
+        height: 12px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .line-middle {
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+      .line-right {
+        width: 2px;
+        height: 8px;
+        position: absolute;
+        right: 0;
+        top: 2px;
+      }
+      &:nth-child(2n+1) {
+        .line-left {
+          display: none;
+        }
+      }
+      &:nth-child(2n) {
+        .line-left,
+        .line-right {
+          display: none;
+        }
+      }
+      &:first-child {
+        visibility: hidden;
+      }
+      &:nth-child(2) {
+        .line-left {
+          display: block;
+        }
+        .line-right {
+          display: none;
+        }
+      }
+      &:last-child {
+        .line-left {
+          display: none;
+        }
+        .line-right {
+          height: 12px;
+          top: 0;
+        }
+      }
+    }
+  }
+  .scale {
+    @include clearfix;
+    opacity: .3;
+    margin-top: 8px;
+    .scale-min {
+      float: left;
+    }
+    .scale-max {
+      float: right;
+    }
+  }
+}
+
 #landing {
   p {
     margin-bottom: 45px;
