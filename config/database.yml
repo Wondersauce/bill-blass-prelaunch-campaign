@@ -18,5 +18,8 @@ test:
 
 production:
   adapter: postgresql
+  encoding: unicode
   database: prelaunchr
+  username: prelaunch
+  password: W0nd3rS@uc341!
   host: localhost
