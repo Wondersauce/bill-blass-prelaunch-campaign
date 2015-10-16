@@ -63,7 +63,18 @@ Prelaunchr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'www.example.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = "www.billblass.com"
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
+    :user_name => "postmaster@sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
+    :password => "822efc57aca0eeb9c5ac00ff911a52cf"
+  }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
