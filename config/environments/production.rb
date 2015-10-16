@@ -66,7 +66,7 @@ Prelaunchr::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = "www.billblass.com"
+  config.action_mailer.default_url_options = "162.242.239.91"
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
     :address => "smtp.mailgun.org",
