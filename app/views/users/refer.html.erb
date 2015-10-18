@@ -23,10 +23,10 @@
     <div id="number-line">
       <ul class="numbers">
         <% (0..20).each do |n| %>
-          <% if n == [@user.referrals.count, 20].min then %>
+          <% if n == [@user.referrals.count, 20].min %>
             <li class="current">$<%= n * 10 %></li>
           <% else %>
-            <li>$<%= n * 10 %></li>
+            <li><% if @user.referrals.count != 1 || n != 0 then %>$<%= n * 10 %><% end %></li>
           <% end %>
         <% end %>
       </ul>
