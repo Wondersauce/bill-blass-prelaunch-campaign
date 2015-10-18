@@ -66,14 +66,14 @@ Prelaunchr::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = "162.242.239.91"
+  config.action_mailer.default_url_options = "http://www.billblass.com"
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
     :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
-    :user_name => "postmaster@sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
-    :password => "822efc57aca0eeb9c5ac00ff911a52cf"
+    :domain => "mg.billblass.com",
+    :user_name => "postmaster@mg.billblass.com",
+    :password => "ebe79afdc20e5df5b838317cf6096d98"
   }
 
   # Log the query plan for queries taking more than this (works
