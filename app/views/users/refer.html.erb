@@ -15,7 +15,7 @@
       <% email_content = %(A fabulous friend has invited you to the exclusive pre-launch of Bill Blass. When you sign up for the private launch offer, you will be entered to win $3000 of Bill Blass product.%0D%0A%0D%0AEven better, for every stylish friend you refer, you will receive a $10 credit if they register, up to $200!%0D%0A%0D%0ASign up here:) %>
       <li class="twitter"><a target="_blank" href="https://twitter.com/intent/tweet?text=<%= CGI::escape(message + " " + root_url + '?ref=' + @user.referral_code) %>"><i class="fa fa-twitter"></i></a></li>
       <li class="facebook"><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url + '?ref=' + @user.referral_code) %>&title=Bill+Blass"><i class="fa fa-facebook"></i></a></li>
-      <li class="envelope"><a href="mailto:?subject=<%= email_title %>&body=<%= email_content + " " + root_url + '?ref=' + @user.referral_code %>"<i class="fa fa-envelope"></i></a></li>
+      <li class="envelope"><a href="mailto:?subject=<%= email_title %>&body=<%= email_content + " " + root_url + '?ref=' + @user.referral_code %>"><i class="fa fa-envelope"></i></a></li>
     </ul>
   </div>
   <div class="rewards">
