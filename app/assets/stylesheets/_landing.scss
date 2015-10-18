@@ -17,13 +17,16 @@
   left: 50%;
 	bottom: 0;
 	padding: 60px $padding-desktop-h;
-  width: 320px;
+  width: 360px;
   text-align: center;
   box-sizing: border-box;
-  margin-left: -160px;
+  margin-left: -180px;
   a {
     display: inline-block;
     margin-left: 10px;
+  }
+  .contact-mobile {
+    display: none;
   }
 }
 #share {
@@ -37,19 +40,20 @@
   }
 }
 #follow,
-#share {
+#share,
+#contact {
   ul {
     li {
       font-size: 1.2em;
       display: inline-block;
-      a {
-        border-width: 0;
-        @include transition(opacity .3s);
-        &:hover {
-          border-width: 0;
-          opacity: .65;
-        }
-      }
+    }
+  }
+  a {
+    border-width: 0;
+    @include transition(opacity .3s);
+    &:hover {
+      border-width: 0;
+      opacity: .65;
     }
   }
 }

@@ -37,6 +37,22 @@
 			bottom: $p;
 			right: $p;
 		}
+    #follow {
+      padding-left: $p;
+    }
+    #share {
+      padding-right: $p;
+    }
+    #contact {
+      width: 320px;
+      margin-left: -160px;
+      .contact {
+        display: none;
+      }
+      .contact-mobile {
+        display: block;
+      }
+    }
 		.sidebar {
 			width: 100%;
 			ul {
