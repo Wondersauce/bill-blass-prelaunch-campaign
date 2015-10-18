@@ -27,14 +27,20 @@ BillBlass.Navigation = {
 		$(this.followButton).on('mouseenter', function(e) {
 			e.stopPropagation();
 			this.openFollow();
+      this.closeContact();
+      this.closeShare();
 		}.bind(this));
 		$(this.contactButton).on('mouseenter', function(e) {
 			e.stopPropagation();
 			this.openContact();
+      this.closeFollow();
+      this.closeShare();
 		}.bind(this));
 		$(this.shareButton).on('mouseenter', function(e) {
 			e.stopPropagation();
 			this.openShare();
+      this.closeFollow();
+      this.closeContact();
 		}.bind(this));
     $(this.followSidebar).on('mouseleave', function(e) {
 			e.stopPropagation();
