@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
   <meta property="og:title" content=""/>
   <meta property="og:description" content=""/>
-  <meta property="og:image" content=""/>
+  <meta property="og:image:url" content="<%= root_url + asset_path("poster.png") %>"/>
   <% if @user.id? && @user.referral_code %>
     <meta property="og:url" content="<%= root_url + '?ref=' + @user.referral_code %>"/>
   <% elsif cookies[:h_ref] && @user.id.nil? %>
