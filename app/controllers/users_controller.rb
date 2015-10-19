@@ -49,7 +49,7 @@ class UsersController < ApplicationController
             puts '------------'
 
             if !@referred_by.nil?
-                @user.referrer = @referred_by
+                #@user.referrer = @referred_by
             end
 
             @user.save
