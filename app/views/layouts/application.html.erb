@@ -10,14 +10,8 @@
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
   <meta property="og:title" content=""/>
   <meta property="og:description" content=""/>
-  <meta property="og:image:url" content="<%= root_url + asset_path("poster.png") %>"/>
-  <% if @user.id? && @user.referral_code %>
-    <meta property="og:url" content="<%= root_url + '?ref=' + @user.referral_code %>"/>
-  <% elsif cookies[:h_ref] && @user.id.nil? %>
-    <meta property="og:url" content="<%= root_url + '?ref=' + cookies[:h_ref] %>"/>
-  <% else %>
-    <meta property="og:url" content="<%= root_url %>"/>
-  <% end %>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content="<%= root_url %>"/>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
   <%= stylesheet_link_tag "application.css", :media => "all" %>
@@ -46,7 +40,6 @@
         </div>
       </div>
       <div id="bottom">
-        <%= link_to "Terms & Conditions", { :controller => "users", :action => "policy" }, :id => "terms-open", :target => "_blank" %>
         <div id="countbox"></div>
       </div>
     </div>
