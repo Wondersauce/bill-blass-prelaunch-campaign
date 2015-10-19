@@ -4,7 +4,34 @@ $(function() {
 BillBlass = {
 	init: function() {
 		this.Navigation.init();
-	}
+    $('a.track').on('click', function(e) {
+      ga('send', 'event', 'outbound', 'click', $(this).attr('href'));
+    });
+    $('#contact .email').on('click', function(e) {
+      ga('send', 'event', 'contact-email', 'click');
+    });
+    $('#contact .phone').on('click', function(e) {
+      ga('send', 'event', 'contact-phone', 'click');
+    });
+    $('#social .twitter').on('click', function(e) {
+      ga('send', 'event', 'twitter-share', 'click');
+    });
+    $('#social .facebook').on('click', function(e) {
+      ga('send', 'event', 'facebook-share', 'click');
+    });
+    $('#social .envelope').on('click', function(e) {
+      ga('send', 'event', 'email-share', 'click');
+    });
+    $('#share .twitter').on('click', function(e) {
+      ga('send', 'event', 'twitter-share-footer', 'click');
+    });
+    $('#share .facebook').on('click', function(e) {
+      ga('send', 'event', 'facebook-share-footer', 'click');
+    });
+    $('#share .envelope').on('click', function(e) {
+      ga('send', 'event', 'email-share-footer', 'click');
+    });
+	},
 };
 
 BillBlass.Navigation = {
