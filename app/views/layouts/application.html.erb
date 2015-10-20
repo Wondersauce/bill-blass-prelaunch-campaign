@@ -11,12 +11,14 @@
   <meta property="og:title" content=""/>
   <meta property="og:description" content=""/>
   <meta property="og:image:url" content="<%= root_url + asset_path("poster.png") %>"/>
-  <% if @user.id? && @user.referral_code %>
-    <meta property="og:url" content="<%= root_url + '?ref=' + @user.referral_code %>"/>
-  <% elsif cookies[:h_ref] && @user.id.nil? %>
-    <meta property="og:url" content="<%= root_url + '?ref=' + cookies[:h_ref] %>"/>
-  <% else %>
-    <meta property="og:url" content="<%= root_url %>"/>
+  <% if @user %>
+    <% if @user.id? && @user.referral_code %>
+      <meta property="og:url" content="<%= root_url + '?ref=' + @user.referral_code %>"/>
+    <% elsif cookies[:h_ref] && @user.id.nil? %>
+      <meta property="og:url" content="<%= root_url + '?ref=' + cookies[:h_ref] %>"/>
+    <% else %>
+      <meta property="og:url" content="<%= root_url %>"/>
+    <% end %>
   <% end %>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
