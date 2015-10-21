@@ -1,60 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http//www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="margin: 0;padding: 0;color: #fff;font-family: Arial, Helvetica, sans-serif;font-size: 16px;line-height: 1.5;overflow: hidden;">
-  <div class="container" style="max-width: 600px;background-color: #d4a53f;text-align: center;position: relative;">
-    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
-      <tr>
-        <td>
-          <div style="background: url(<%= @base_url %>/assets/prelaunch/referral-email--top-left.png) no-repeat left top">
-            <div style="width: 75%;margin: 0 auto;color: #FFF">
-              <img class="logo" src="<%= @base_url %>/assets/prelaunch/logo.png" alt="Bill Blass logo" style="margin: 40px auto 60px;">
-
-              <p style="margin: 0 auto 30px;color: #FFF">Welcome to the pre-launch of Bill Blass! <br>
-                As a member of this exclusive group you are entered to win $3000 of Bill Blass product.</p>
-
-                <p style="margin: 0 auto 30px;color: #FFF">Even better, get $10 in credit for every cool friend you refer who registers.</p>
-
-                <br>
-
-                <p style="margin: 0 auto 30px;color: #FFF">Offer ends 10/27/15. Refer friends here: </p>
-
-                <img class="graph" src="<%= @base_url %>/assets/prelaunch/rewards-graph.png" alt="Graph of rewards credit racked up from referred cool friends" style="max-width: 100%;">
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div style="background: url(<%= @base_url %>/assets/prelaunch/referral-email--bottom-right.png) no-repeat right top;">
-              <div style="width: 75%;margin: 0 auto;color: #FFF">
-                <a href="<%= @ref_url %>" class="btn" style="width: 240px;height: 55px;display: table;margin: 40px auto;border: 2px solid #fff;color: inherit;text-decoration: none;">
-                  <span style="display: table-cell;vertical-align: middle;font-size: 14px;color: #FFF">Refer friends for $10/referral</span>
-                </a>
-
-                <p style="margin: 0 auto 5px;color: #FFF">Your shareable link:</p>
-                <p style="margin: 0 auto 30px;"><a href="<%= @ref_url%>" style="color: #E4C181"><%= @ref_url %></a></p>
-
-                <div style="padding-bottom: 60px">
-                  <ul style="list-style: none;padding: 0; margin: 0;">
-                    <li class="twitter" style="display: inline-block;margin: 0 10px;">
-                      <a style="border:0" href="http://twitter.com/share?url=<%= CGI::escape(@ref_url) %>&text=<%= CGI::escape(@share_message) %>"><img src="<%= @base_url %>/assets/prelaunch/twitter.png" alt="Tweet this">
-                    </li>
-                    <li class="facebook" style="display: inline-block;margin: 0 10px;">
-                      <a style="border:0" href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(@ref_url) %>&title=Bill Blass"><img src="<%= @base_url %>/assets/prelaunch/facebook.png" alt="Share this info with your friends on Facebook"></a>
-                    </li>
-                  </ul>
-                </div>
-
-                <p style="margin: 0 auto 30px;"><a href="<%= @base_url %>" style="color: #FFF">Terms and Conditions</a></p>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </body>
+<body style="margin: 0; padding: 0; color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5">
+  <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="max-width: 600px; background-color: #d4a53f; text-align: center">
+    <tr>
+      <td align="center" style="background: url('<%= @base_url %>/assets/prelaunch/referral-email--top-left.png') no-repeat left top">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="75%">
+          <tr>
+            <td align="center" style="padding-top: 40px; padding-bottom: 60px"><a href="http://www.billblass.com/"><img class="logo" src="<%= @base_url %>/assets/prelaunch/logo.png" alt="Bill Blass" style="border-width: 0"></a></td>
+          </tr>
+          <tr>
+            <td align="center" style="padding-bottom: 30px; color: #FFF">
+              Welcome to the pre-launch of Bill Blass!<br>
+              As a member of this exclusive group you are entered to win $3000 of Bill Blass product.
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding-bottom: 30px; color: #FFF">Even better, get $10 in credit for every cool friend you refer who registers.</td>
+          </tr>
+          <tr><td align="center" style="padding-bottom: 30px; color: #FFF">Offer ends 10/27/15. Refer friends here:</td></tr>
+          <tr><td><img class="graph" src="<%= @base_url %>/assets/prelaunch/rewards-graph.png" alt="Graph of rewards credit racked up from referred cool friends" style="max-width: 100%;"></td></tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" style="background: url('<%= @base_url %>/assets/prelaunch/referral-email--bottom-right.png') no-repeat right bottom;">
+        <table border="0" cellpadding="0" cellspacing="0" height="100%" width="75%">
+          <tr>
+            <td align="center" style="padding-top: 40px; padding-bottom: 60px"><a href="<%= @ref_url %>" style="display: inline-block; width: 240px; border: 2px solid #FFF; padding: 15px; font-size: 14px; color: #FFF; text-decoration: none;">Refer friends for $10/referral</a></td>
+          </tr>
+          <tr><td align="center" style="padding-bottom: 5px; color: #FFF">Your shareable link:</td></tr>
+          <tr><td align="center" style="padding-bottom: 30px; color: #FFF"><a href="<%= @ref_url%>" style="color: #E4C181"><%= @ref_url %></a></td></tr>
+          <tr>
+            <td align="center" style="padding-bottom: 50px; color: #FFF">
+              <table border="0" cellpadding="10" cellspacing="0" width="68px">
+                <tr>
+                  <td><a href="http://twitter.com/share?url=<%= CGI::escape(@ref_url) %>&text=<%= CGI::escape(@share_message) %>"><img style="border-width: 0" src="<%= @base_url %>/assets/prelaunch/twitter.png"></a></td>
+                  <td><a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(@ref_url) %>&title=Bill Blass"><img style="border-width: 0" src="<%= @base_url %>/assets/prelaunch/facebook.png"></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td align="center" style="padding-bottom: 70px"><a href="<%= @base_url %>" style="color: #FFF">Terms and Conditions</a></td></tr>
+          <tr><td align="center" style="padding-bottom: 10px">&nbsp;</td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
 </html>
