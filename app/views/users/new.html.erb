@@ -1,6 +1,10 @@
 <div id="landing">
   <h1>Bill Blass:  the first American designer brand, est. 1970</h1>
-  <p>Be the first to get a sneak peek of Bill Blass ready-to-wear, handbags, shoes, and more before the November 2<sup>nd</sup> launch.</p>
+  <p>
+    Launching November 2<sup>nd</sup>, 2015<br>
+    <br>
+    Sign up for events, announcements of new collections, sneak peeks, and behind the scenes activity.
+  </p>
   <%= form_for @user, :url => { :action => "create" } do |f| %>
     <%= f.text_field :email, :placeholder => "Enter your email", :class => "email" %>
     <input class="submit" name="commit" type="submit" value="Submit" />
