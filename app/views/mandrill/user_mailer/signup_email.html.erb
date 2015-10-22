@@ -7,10 +7,10 @@
 <body style="margin: 0; padding: 0; color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5">
   <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="max-width: 600px; background-color: #d4a53f; text-align: center">
     <tr>
-      <td align="center" style="background: url('<%= @base_url %>/assets/prelaunch/referral-email--top-left.png') no-repeat left top">
+      <td align="center" style="background: url('<%= base_url %>/assets/prelaunch/referral-email--top-left.png') no-repeat left top">
         <table border="0" cellpadding="0" cellspacing="0" height="100%" width="75%">
           <tr>
-            <td align="center" style="padding-top: 40px; padding-bottom: 60px"><a href="http://www.billblass.com/"><img class="logo" src="<%= @base_url %>/assets/prelaunch/logo.png" alt="Bill Blass" style="border-width: 0"></a></td>
+            <td align="center" style="padding-top: 40px; padding-bottom: 60px"><a href="http://www.billblass.com/"><img class="logo" src="<%= base_url %>/assets/prelaunch/logo.png" alt="Bill Blass" style="border-width: 0"></a></td>
           </tr>
           <tr>
             <td align="center" style="padding-bottom: 30px; color: #FFF">
@@ -22,29 +22,29 @@
             <td align="center" style="padding-bottom: 30px; color: #FFF">Even better, get $10 in credit for every cool friend you refer who registers.</td>
           </tr>
           <tr><td align="center" style="padding-bottom: 30px; color: #FFF">Offer ends 10/27/15. Refer friends here:</td></tr>
-          <tr><td><img class="graph" src="<%= @base_url %>/assets/prelaunch/rewards-graph.png" alt="Graph of rewards credit racked up from referred cool friends" style="max-width: 100%;"></td></tr>
+          <tr><td><img class="graph" src="<%= base_url %>/assets/prelaunch/rewards-graph.png" alt="Graph of rewards credit racked up from referred cool friends" style="max-width: 100%;"></td></tr>
         </table>
       </td>
     </tr>
     <tr>
-      <td align="center" style="background: url('<%= @base_url %>/assets/prelaunch/referral-email--bottom-right.png') no-repeat right bottom;">
+      <td align="center" style="background: url('<%= base_url %>/assets/prelaunch/referral-email--bottom-right.png') no-repeat right bottom;">
         <table border="0" cellpadding="0" cellspacing="0" height="100%" width="75%">
           <tr>
-            <td align="center" style="padding-top: 40px; padding-bottom: 60px"><a href="<%= @ref_url %>" style="display: inline-block; width: 240px; border: 2px solid #FFF; padding: 15px; font-size: 14px; color: #FFF; text-decoration: none;">Refer friends for $10/referral</a></td>
+            <td align="center" style="padding-top: 40px; padding-bottom: 60px"><a href="<%= ref_url %>" style="display: inline-block; width: 240px; border: 2px solid #FFF; padding: 15px; font-size: 14px; color: #FFF; text-decoration: none;">Refer friends for $10/referral</a></td>
           </tr>
           <tr><td align="center" style="padding-bottom: 5px; color: #FFF">Your shareable link:</td></tr>
-          <tr><td align="center" style="padding-bottom: 30px; color: #FFF"><a href="<%= @ref_url%>" style="color: #E4C181"><%= @ref_url %></a></td></tr>
+          <tr><td align="center" style="padding-bottom: 30px; color: #FFF"><a href="<%= ref_url%>" style="color: #E4C181"><%= ref_url %></a></td></tr>
           <tr>
             <td align="center" style="padding-bottom: 50px; color: #FFF">
               <table border="0" cellpadding="10" cellspacing="0" width="68px">
                 <tr>
-                  <td><a href="http://twitter.com/share?url=<%= CGI::escape(@ref_url) %>&text=<%= CGI::escape(@share_message) %>"><img style="border-width: 0" src="<%= @base_url %>/assets/prelaunch/twitter.png"></a></td>
-                  <td><a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(@ref_url) %>&title=Bill Blass"><img style="border-width: 0" src="<%= @base_url %>/assets/prelaunch/facebook.png"></a></td>
+                  <td><a href="http://twitter.com/share?url=<%= CGI::escape(ref_url) %>&text=<%= CGI::escape(share_message) %>"><img style="border-width: 0" src="<%= base_url %>/assets/prelaunch/twitter.png"></a></td>
+                  <td><a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(ref_url) %>&title=Bill Blass"><img style="border-width: 0" src="<%= base_url %>/assets/prelaunch/facebook.png"></a></td>
                 </tr>
               </table>
             </td>
           </tr>
-          <tr><td align="center" style="padding-bottom: 70px"><a href="<%= @base_url %>" style="color: #FFF">Terms and Conditions</a></td></tr>
+          <tr><td align="center" style="padding-bottom: 70px"><a href="<%= base_url %>" style="color: #FFF">Terms and Conditions</a></td></tr>
           <tr><td align="center" style="padding-bottom: 10px">&nbsp;</td></tr>
         </table>
       </td>

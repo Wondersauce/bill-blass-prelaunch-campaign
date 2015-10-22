@@ -46,12 +46,12 @@ Prelaunchr::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = "http://eels.biz:3000"
-  config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
-    :user_name => "postmaster@sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
-    :password => "822efc57aca0eeb9c5ac00ff911a52cf"
-  }
+  # config.action_mailer.smtp_settings = {
+  #   :authentication => :plain,
+  #   :address => "smtp.mailgun.org",
+  #   :port => 587,
+  #   :domain => "sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
+  #   :user_name => "postmaster@sandbox53a0032f48b242d1b6f81297ab1a441c.mailgun.org",
+  #   :password => "822efc57aca0eeb9c5ac00ff911a52cf"
+  # }
 end

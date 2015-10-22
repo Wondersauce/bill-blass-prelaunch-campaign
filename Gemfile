@@ -46,3 +46,5 @@ gem 'unicorn'
 # gem 'debugger'
 
 gem 'font-awesome-rails'
+
+gem 'mandrill_mailer', github: 'renz45/mandrill_mailer', branch: 'master'
