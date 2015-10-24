@@ -40,6 +40,12 @@ class UsersController < ApplicationController
 
             @user = User.new(:email => params[:user][:email])
 
+            gibbon = Gibbon::API.new("6a97a07695b90810655b7559f7ecbb2b-us9")
+            gibbon.lists.subscribe({
+              :id => "8b8e99d960",
+              :email => { :email => params[:user][:email] }
+            })
+
             @referred_by = User.find_by_referral_code(cookies[:h_ref])
 
             puts '------------'
