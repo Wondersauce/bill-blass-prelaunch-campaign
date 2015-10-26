@@ -67,14 +67,14 @@ Prelaunchr::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = "http://www.billblass.com"
-  config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "mg.billblass.com",
-    :user_name => "postmaster@mg.billblass.com",
-    :password => "ebe79afdc20e5df5b838317cf6096d98"
-  }
+  # config.action_mailer.smtp_settings = {
+  #   :authentication => :plain,
+  #   :address => "smtp.mailgun.org",
+  #   :port => 587,
+  #   :domain => "mg.billblass.com",
+  #   :user_name => "postmaster@mg.billblass.com",
+  #   :password => "ebe79afdc20e5df5b838317cf6096d98"
+  # }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)

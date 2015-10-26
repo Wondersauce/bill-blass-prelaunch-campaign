@@ -12,6 +12,8 @@ gem 'activeadmin'
 
 gem 'bourbon'
 
+gem 'gibbon'
+
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'sass-rails'
@@ -46,3 +48,5 @@ gem 'unicorn'
 # gem 'debugger'
 
 gem 'font-awesome-rails'
+
+gem 'mandrill_mailer', github: 'renz45/mandrill_mailer', branch: 'master'
