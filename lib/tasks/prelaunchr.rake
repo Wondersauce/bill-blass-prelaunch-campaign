@@ -3,9 +3,9 @@ require 'csv'
 namespace :prelaunchr do
     desc "Will out put CSV's for each group of users you should email"
     task :create_winner_csvs => :environment do
-        stops = User::REFERRAL_STEPS.map{|stop| stop["count"]}
+        stops = (1..20).each
 
-        winners = Hash.new {|h,k| h[k]=[]} 
+        winners = Hash.new {|h,k| h[k]=[]}
         User.all.each { |user|
             found = nil
 
@@ -20,10 +20,10 @@ namespace :prelaunchr do
             end
         }
 
-        winners.each { |stop, list|  
+        winners.each { |stop, list|
             CSV.open("#{Rails.root}/lib/assets/group_#{stop}.csv", "wb") do |csv|
-                list.each { |user|  
-                    csv << [user.email, user.referrals.count]
+                list.each { |user|
+                    csv << [user.email, user.referrals.count, user.referrals.map { |user| user.email } .join("; ") ]
                 }
             end
         }
