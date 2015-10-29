@@ -7,7 +7,7 @@ namespace :prelaunchr do
 
         winners = Hash.new {|h,k| h[k]=[]}
         User.all.each { |user|
-            found = nil
+            found = 0
 
             stops.reverse_each { |stop|
                 if stop <= user.referrals.count and !found
@@ -15,9 +15,7 @@ namespace :prelaunchr do
                 end
             }
 
-            if found
-                winners[found] << user
-            end
+            winners[found] << user
         }
 
         winners.each { |stop, list|
